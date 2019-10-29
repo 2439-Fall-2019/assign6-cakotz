@@ -41,11 +41,10 @@
 			$("#testBtn").click(function() {
 				var itemToAddName = $.trim($("#additemname").val());
                 var itemToAddAddress = $.trim($("#additemaddress").val());
-				if(itemToAdd == "") return;
-				$("#theList").append("<a href='"+itemToAddAddress+"'><li>"+itemToAddName+"</li></a>");
+				if((itemToAddName == "")  || (itemToAddAddress == "")) return;
+				$("#theList").append("<li><a href='"+itemToAddAddress+"'>"+itemToAddName+"</a></li>");
 				$("#theList").listview("refresh");
 			});
-            //I can't figure out how to get the javascript to work from what ive looked at it should work.
 		</script>
 	</body>
 </html>
